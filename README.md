@@ -20,8 +20,7 @@
 
 ## 🛠️ Tech Stack
 
-- HTML5 + CSS3
-- JavaScript (Web Audio API)
+-React and type sccript
 - Hosted on [Netlify](https://www.netlify.com/)
 
 ## 📄 License
