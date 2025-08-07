@@ -1,15 +1,12 @@
 import React from 'react';
 import { Mic, MicOff, Square, Circle, Volume2, Settings } from 'lucide-react';
 import { AudioState } from '../types/audio';
-
 interface AudioControlsProps {
 audioState: AudioState;
 onToggleListening: () => void;
 onStartRecording: () => void;
 onStopRecording: () => void;
-onVolumeChange: (volume: number) => void;
-}
-
+onVolumeChange: (volume: number) => void;}
 export const AudioControls: React.FC<AudioControlsProps> = ({
 audioState,
 onToggleListening,
@@ -19,7 +16,6 @@ onVolumeChange
 }) => {
 return (
 <div className="flex flex-col space-y-6">
-{/* Main Controls */}
 <div className="flex items-center justify-center space-x-4">
 <button
 onClick={onToggleListening}
@@ -56,16 +52,14 @@ audioState.isRecording
 <Square className="w-4 h-4" />
 <span>Stop Recording</span>
 </>
-) : (
-<>
+) :
+(<>
 <Circle className="w-4 h-4" />
 <span>Record</span>
-</>
-)}
-</button>
-)}
+</>)
+}
+</button>)}
 </div>
-
 {audioState.isListening && (
 <div className="flex items-center space-x-4 p-4 bg-white/5 rounded-xl border border-white/10">
 <Volume2 className="w-5 h-5 text-white/70" />
@@ -83,16 +77,10 @@ className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slid
 <span className="text-white/70 text-sm min-w-[3rem]">
 {Math.round(audioState.volume * 100)}%
 </span>
-</div>
-)}
-
-{/* Recording Status */}
+</div>)}
 {audioState.isRecording && (
 <div className="flex items-center justify-center space-x-2 p-3 bg-red-500/20 rounded-xl border border-red-500/30">
 <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
 <span className="text-red-300 text-sm font-medium">Recording in progress...</span>
-</div>
-)}
-</div>
-);
-};
+</div>)}
+</div>);};
