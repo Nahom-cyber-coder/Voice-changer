@@ -17,8 +17,7 @@ return;
 }const audio = new Audio(recording.url);
 audio.onended = () => setPlayingIndex(null);
 audio.play();
-setPlayingIndex(index);
-};
+setPlayingIndex(index);};
 if (recordings.length === 0) {
 return (
 <div className="text-center py-8">
@@ -27,11 +26,8 @@ return (
 </div>
 <h3 className="text-white/90 font-medium mb-2">No recordings yet</h3>
 <p className="text-white/60 text-sm">Start recording to save your voice transformations</p>
-</div>
-);
-}
-return (
-<div className="space-y-3">
+</div>);}
+return (<div className="space-y-3">
 <h3 className="text-white/90 font-semibold mb-4">Your Recordings</h3>
 {recordings.map((recording, index) => (
 <div key={recording.timestamp}
@@ -70,6 +66,5 @@ title="Delete recording"
 </div>
 </div>
 ))}
-</div>
-);
+</div>);
 };
