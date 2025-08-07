@@ -32,8 +32,6 @@ return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
 }
 </p>
 </div>
-
-{/* Waveform Visualizer */}
 <div className="relative mb-8">
 <div className="h-32 bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-2xl overflow-hidden border border-white/10">
 <div className="h-full flex items-center justify-center gap-1 px-4">
