@@ -64,8 +64,7 @@ animationDelay: `${index * 20}ms`,
 {formatTime(audioState.recordingDuration)}
 </span>
 </div>
-</div>
-)}
+</div>)}
 </div><div className="flex items-center justify-center space-x-6">
 {!audioState.hasRecording ? (
 <button
@@ -93,7 +92,8 @@ audioState.isRecording
 )}
 </div>
 </button>
-) : (
+) : 
+(
 <button
 onClick={onReset}
 className="group relative overflow-hidden rounded-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600 p-4 transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-xl"
